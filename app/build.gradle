@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'io.fabric'
+apply plugin: 'com.google.gms.google-services'
 
 static def releaseTime() {
     return new Date().format("yy.MMddHH", TimeZone.getTimeZone("GMT+8"))
@@ -15,10 +16,10 @@ android {
     buildToolsVersion '28.0.3'
     signingConfigs {
         myConfig {
-            storeFile file(RELEASE_STORE_FILE)
-            storePassword RELEASE_KEY_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_STORE_PASSWORD
+            storeFile file("D:\\Program Files\\android-studio\\weiun.jks")
+            storePassword 'weijj0528'
+            keyAlias 'weijj0528'
+            keyPassword 'weijj0528'
         }
     }
 
@@ -30,7 +31,6 @@ android {
         versionName version
         project.ext.set("archivesBaseName", name + "_" + version)
         multiDexEnabled true
-
     }
 
     lintOptions {
@@ -145,4 +145,4 @@ greendao {
     targetGenDir 'src/main/java'
 }
 
-apply plugin: 'com.google.gms.google-services'
+
