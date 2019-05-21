@@ -47,6 +47,7 @@
             android:id="@+id/action_donate"
             android:icon="@drawable/ic_donate"
             android:title="@string/donate"
+            android:visible="false"
             app:tint="@color/tv_text_default" />
     </group>
 

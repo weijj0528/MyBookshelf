@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -131,6 +132,8 @@ public class AboutActivity extends MBaseActivity<IPresenter> {
         this.setSupportActionBar(toolbar);
         setupActionBar();
         tvVersion.setText(getString(R.string.version_name, MApplication.getVersionName()));
+        // 隐藏捐赠入口
+        vwDonate.setVisibility(View.GONE);
     }
 
     @Override
